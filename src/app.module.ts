@@ -34,10 +34,8 @@ import { ErrorFilter } from './errors-filter/errors-filter';
       database: process.env.POSTGRES_DB,
       entities: [User, Order, Product],
       synchronize: true,
-      url: process.env.AWS_REGION
-        ? `postgres://${process.env.POSTGRES_USER}:${process.env.POSTGRES_PASSWORD}@aws-0-${process.env.AWS_REGION}.pooler.supabase.com:6543/${process.env.POSTGRES_DB}?options=reference%3D${process.env.REFERENCE_ID}`
-        : undefined,
     }),
+
     MailerModule.forRoot({
       transport: {
         host: process.env.MAIL_HOST,
