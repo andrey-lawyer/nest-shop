@@ -35,7 +35,6 @@ import { ErrorFilter } from './errors-filter/errors-filter';
       entities: [User, Order, Product],
       synchronize: true,
     }),
-
     MailerModule.forRoot({
       transport: {
         host: process.env.MAIL_HOST,
